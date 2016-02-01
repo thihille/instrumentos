@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- HTML DO OED AQUI -->
+        <div class="OED">
+            
+            <div id="tela-inicio">
+                <img src="img/tela-introducao.jpg" alt=""/>
+                <button type="button" id="btn-iniciar"></button>
+                <div id="texto-capa" class="texto">
+                    <p>ENCONTRE <br> O MELHOR <br> INSTRUMENTO <br> PARA DETERMINAR <br> CADA MEDIDA.</p>
+                </div>
+            </div>
+            
+            <div id="jogo">
+                <div id="fase1" class="fase">
+                    <img src="img/tela1.jpg" alt=""/>
+                    <div id="texto-fase1" class="texto">
+                        <p>MARIA QUER DESCOBRIR QUANTO TEMPO ELA LEVA PARA IR DE SUA CASA ATÉ A ESCOLA. O QUE ELA DEVERÁ <br> USAR PARA MEDIR ESSE TEMPO?</p>
+                    </div>
+                </div>
+                <div id="fase2" class="fase">
+                    <img src="img/tela2.jpg" alt=""/>
+                    <div id="texto-fase2" class="texto">
+                        <p>O PADEIRO JOÃO RECEBEU UM <br> PEDIDO DE 300 GRAMAS DE PÃO. <br> QUAL INSTRUMENTO ELE DEVERÁ <br> USAR PARA MEDIR A MASSA <br> DOS PÃES?</p>
+                    </div>
+                </div>
+                <div id="fase3" class="fase">
+                    <img src="img/tela3.jpg" alt=""/>
+                    <div id="texto-fase3" class="texto">
+                        <p>A PROFESSORA ANA PEDIU AOS <br> ALUNOS QUE RECORTASSEM TIRAS <br> DE PAPEL DE 5 CENTÍMETROS DE COMPRIMENTO. QUAL É O MELHOR INSTRUMENTO PARA MEDIR O COMPRIMENTO DOS PAPÉIS?</p>
+                    </div>
+                </div>
+                <div id="fase4" class="fase">
+                    <img src="img/tela4.jpg" alt=""/>
+                    <div id="texto-fase4" class="texto">
+                        <p>LUÍZA FEZ UMA JARRA DE SUCO E GOSTARIA DE SABER SUA CAPACIDADE. QUAL É O MELHOR INSTRUMENTO PARA MEDIR A CAPACIDADE DA JARRA?</p>
+                    </div>
+                </div>
+                <div id="fase5" class="fase">
+                    <img src="img/tela5.jpg" alt=""/>
+                    <div id="texto-fase5" class="texto">
+                        <p>MARCOS QUER SABER QUANTOS BRINQUEDOS DE PLÁSTICO SÃO NECESSÁRIOS PARA ATINGIR A MESMA MASSA QUE UM BRINQUEDO DE MADEIRA. QUAL É O MELHOR INSTRUMENTO PARA COMPARAR AS MASSAS DOS BRINQUEDOS?</p>
+                    </div>
+                </div>
+                
+                <div id="alternativas">
+                    <div id="marca-alternativa1" class="marca-alternativa"></div>
+                    <div id="marca-alternativa2" class="marca-alternativa"></div>
+                    <div id="marca-alternativa3" class="marca-alternativa"></div>
+                    <div id="marca-alternativa4" class="marca-alternativa"></div>
+                    
+                    <button type="button" id="alternativa1" class="alternativa"></button>
+                    <button type="button" id="alternativa2" class="alternativa"></button>
+                    <button type="button" id="alternativa3" class="alternativa"></button>
+                    <button type="button" id="alternativa4" class="alternativa"></button>
+                </div>
+                
+                <div id="feedback">
+                    <div id="feedback1">
+                        <img src="img/tela-certo.png" alt="Muito bem, você acertou!"/>
+                        <button type="button" id="btn-troca-fase"></button>
+                    </div>
+                    <div id="feedback2">
+                        <img src="img/tela-fim.png" alt="Muito bem, você acertou!"/>
+                        <button type="button" id="btn-fim"></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- HTML DO OED AQUI -->
+
+        <!-- CARREGAMENTO DE SCRIPTS -->
+        <!--<script type="text/javascript" src="http://www.editoradobrasil.com.br/objetoslinhasepontos/js/carrega_oed.js"></script>-->
+        <script type="text/javascript" src="../js/carrega_oed.js"></script>
+        <script type="text/javascript" src="js/funcoes.js"></script>	
+    </body>	
+</html>

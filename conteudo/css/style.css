@@ -1,0 +1,186 @@
+/* SEU CSS AQUI */
+
+@font-face {
+    font-family: 'Calibri';
+    src:  url('fontes/calibri.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Calibri';
+    src:  url('fontes/calibrib.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Calibri';
+    src:  url('fontes/calibrii.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic
+}
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,em,img,strong,b,i,ol,ul,li,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,audio,video {
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; font-family: "Calibri", Arial, Helvetica, sans-serif;
+}
+b,strong {
+    font-family: "Calibri", Arial, Helvetica, sans-serif; font-weight: bold;
+}
+i,em {
+    font-family: 'Calibri', Arial, Helvetica, sans-serif; font-style: italic
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+.texto, div img, .marca-alternativa{
+    position: absolute;
+}
+
+#alternativas, .fase, #feedback1, #feedback2{
+    display: none;
+}
+
+button{
+    color: #ffffff;
+    background-color: transparent;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.texto p{
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+
+#btn-iniciar{
+    height: 73px;
+    left: 387px;
+    top: 493px;
+    width: 247px;
+}
+
+#btn-troca-fase{
+    height: 73px;
+    left: 179px;
+    top: 581px;
+    width: 247px;
+}
+
+#btn-fim{
+    height: 73px;
+    left: 150px;
+    top: 581px;
+    width: 305px;
+}
+
+#texto-capa{
+    left: 321px;
+    top: 176px;
+    width: 383px;
+}
+#texto-capa p{
+    font-size: 45px;
+    letter-spacing: -2px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.alternativa{
+    background-image: url("../img/fundo-branco.png");
+    height: 193px;
+    opacity: 0;
+    width: 193px;
+    
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+}
+.alternativa-correta{
+    border: 4px solid green;
+    background-image: none;
+}
+.alternativa-errada{
+    border: 4px solid red;
+}
+
+.marca-alternativa{
+    height: 47px;
+    width: 48px;
+}
+.marca-alternativa-correta{
+    background-image: url("../img/marca-certo.png");
+    background-repeat: no-repeat;
+}
+.marca-alternativa-errada{
+    background-image: url("../img/marca-erro.png");
+    background-repeat: no-repeat;
+}
+
+#alternativa1{
+    left: 622px;
+    top: 227px;
+}
+#alternativa2{
+    left: 820px;
+    top: 227px;
+}
+#alternativa3{
+    left: 622px;
+    top: 425px;
+}
+#alternativa4{
+    left: 820px;
+    top: 425px;
+}
+
+#marca-alternativa1{
+    left: 629px;
+    top: 230px;
+}
+#marca-alternativa2{
+    left: 829px;
+    top: 230px;
+}
+#marca-alternativa3{
+    left: 629px;
+    top: 428px;
+}
+#marca-alternativa4{
+    left: 829px;
+    top: 428px;
+}
+
+#texto-fase1{
+    left: 627px;
+    top: 45px;
+    width: 390px;
+}
+#texto-fase2{
+    left: 627px;
+    top: 29px;
+    width: 390px;
+}
+#texto-fase3{
+    left: 627px;
+    top: 13px;
+    width: 390px;
+}
+#texto-fase4{
+    left: 627px;
+    top: 43px;
+    width: 390px;
+}
+#texto-fase5{
+    left: 627px;
+    top: 6px;
+    width: 390px;
+}
+#texto-fase5 p{
+    line-height: 28px;
+}
