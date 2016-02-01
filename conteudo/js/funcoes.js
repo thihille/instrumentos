@@ -27,7 +27,7 @@
 
 var somAcerto = new Howl({urls: ['media/audio/certo.mp3']});
 var somErro = new Howl({urls: ['media/audio/erro.mp3']});
-var narracao = new Howl({
+var falas = new Howl({
     urls: ['media/audio/DKM1006.mp3'], 
     sprite: {
         titulo: [0, 3100],
@@ -45,17 +45,15 @@ var totalFases = 5;
 var resp = [3, 2, 3, 1, 3];
 var startGame = {
 	init: function(){
-        narracao.play("introducao");
+        falas.play("introducao");
 	}
 };
-$("#btn-fim").click(function(){
+$("#btn-fim").on("click",function(){
     window.parent.location.href = '../index.html';
 });
-$("#btn-troca-fase").click(function(){
-    narracao.stop();
-
+$("#btn-troca-fase").on("click",function(){
+    falas.stop();
     faseAtual++;
-
     $("#alternativas").fadeOut(400, function(){
         for(var i = 1; i <= 4; i++){
             $("#alternativa" + i).removeClass("alternativa-errada");
@@ -66,7 +64,6 @@ $("#btn-troca-fase").click(function(){
             $("#marca-alternativa" + i).removeClass("marca-alternativa-errada");
             $("#marca-alternativa" + i).removeClass("marca-alternativa-correta");
         }
-
         $("#alternativas").show();
     });
 
@@ -74,57 +71,45 @@ $("#btn-troca-fase").click(function(){
     $("#fase" + faseAtual).fadeIn(500, function(){
         $("#fase" + (faseAtual-1)).hide();
         $("#alternativas").show();
-
-        narracao.play("fase" + faseAtual);
+        falas.play("fase" + faseAtual);
     });
 });
-$(".alternativa").click(function(){
+$(".alternativa").on("click",function(){
     var alternativaEscolhida = Number($(this).attr("id").substr(11));
-
-    narracao.stop();
-
+    falas.stop();
     if(alternativaEscolhida == resp[faseAtual-1]){
         $("#marca-alternativa" + alternativaEscolhida).addClass("marca-alternativa-correta");
         $(this).addClass("alternativa-correta");
         somAcerto.play();
-
         for(var i = 1; i <= 4; i++){
             if(i != resp[faseAtual-1]){
-                //$("#alternativa" + i).addClass("alternativa-errada");
                 $("#alternativa" + i).prop('disabled', true);
                 $("#alternativa" + i).css("opacity", "1");
                 $("#alternativa" + i).css('cursor', 'auto');
-                //$("#marca-alternativa" + i).addClass("marca-alternativa-errada");
             }
         }
-
         if(faseAtual < totalFases){
             $("#feedback1").fadeIn();
         }
         else{
             $("#feedback2").fadeIn();
         }
-        narracao.play("acerto");
+        falas.play("acerto");
     }
     else{
         $("#marca-alternativa" + alternativaEscolhida).addClass("marca-alternativa-errada");
         $(this).addClass("alternativa-errada");
         somErro.play();
     }
-
     $(this).css("opacity", "1");
     $(this).prop('disabled', true);
     $(this).css('cursor', 'auto');
 });
-$("#btn-iniciar").click(function(){
-    narracao.stop();
-
+$("#btn-iniciar").on("click",function(){
+    falas.stop();
     $("#fase" + faseAtual).fadeIn(500, function(){
         $("#tela-inicio").hide();
         $("#alternativas").show();
-
-        narracao.play("fase" + faseAtual);
+        falas.play("fase" + faseAtual);
     });
 });
-//startGame.init();
-
