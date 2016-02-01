@@ -45,7 +45,7 @@ var totalFases = 5;
 var resp = [3, 2, 3, 1, 3];
 var startGame = {
 	init: function(){
-        falas.play("introducao");
+        falas.stop().play("introducao");
 	}
 };
 $("#btn-fim").on("click",function(){
@@ -71,7 +71,7 @@ $("#btn-troca-fase").on("click",function(){
     $("#fase" + faseAtual).fadeIn(500, function(){
         $("#fase" + (faseAtual-1)).hide();
         $("#alternativas").show();
-        falas.play("fase" + faseAtual);
+        falas.stop().play("fase" + faseAtual);
     });
 });
 $(".alternativa").on("click",function(){
@@ -80,7 +80,7 @@ $(".alternativa").on("click",function(){
     if(alternativaEscolhida == resp[faseAtual-1]){
         $("#marca-alternativa" + alternativaEscolhida).addClass("marca-alternativa-correta");
         $(this).addClass("alternativa-correta");
-        somAcerto.play();
+        somAcerto.stop().play();
         for(var i = 1; i <= 4; i++){
             if(i != resp[faseAtual-1]){
                 $("#alternativa" + i).prop('disabled', true);
@@ -94,12 +94,12 @@ $(".alternativa").on("click",function(){
         else{
             $("#feedback2").fadeIn();
         }
-        falas.play("acerto");
+        falas.stop().play("acerto");
     }
     else{
         $("#marca-alternativa" + alternativaEscolhida).addClass("marca-alternativa-errada");
         $(this).addClass("alternativa-errada");
-        somErro.play();
+        somErro.stop().play();
     }
     $(this).css("opacity", "1");
     $(this).prop('disabled', true);
@@ -110,6 +110,6 @@ $("#btn-iniciar").on("click",function(){
     $("#fase" + faseAtual).fadeIn(500, function(){
         $("#tela-inicio").hide();
         $("#alternativas").show();
-        falas.play("fase" + faseAtual);
+        falas.stop().play("fase" + faseAtual);
     });
 });
